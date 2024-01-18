@@ -26,10 +26,12 @@ class DiceSimulator
 
     static void DisplayHistogram(int[] results, int totalRolls)
     {
+        // Write the introduction to the game and explain the rules
         Console.WriteLine("\nDICE ROLLING SIMULATION RESULTS");
         Console.WriteLine("Each \"*\" represents 1% of the total number of rolls.");
         Console.WriteLine($"Total number of rolls = {totalRolls}.\n");
 
+        // Displays all the asterisks for the histogram
         for (int i = 2; i <= 12; i++)
         {
             int percentage = results[i] * 100 / totalRolls;
